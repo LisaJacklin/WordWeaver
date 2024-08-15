@@ -2,7 +2,7 @@
 #WordWeaver
 #2024-08-14
 
-from tkinter import Tk, Label, Menu, Text, PhotoImage, Frame
+from tkinter import Tk, Label, Menu, Text, Frame, StringVar, Scrollbar
 #from PIL import Image, ImageTk, ImageEnhance
 import os
 
@@ -21,13 +21,13 @@ class MainApp:
         
         # Set up menu bar
         self.setup_menu()
-
-    # Set up background
+         # Set up background
         self.setup_background()
-
         # Set up text area on top of the overlay
         self.setup_text_area()
-                
+
+        #adittional setup
+
         # Set up text area
         #TOOD adjustments to a new function call
         # self.text_area = Text(self.root, wrap='word')
@@ -86,3 +86,4 @@ class MainApp:
         self.text_area.pack(expand=True, fill='both')
 
 
+   
