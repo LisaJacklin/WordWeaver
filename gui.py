@@ -6,12 +6,19 @@ from tkinter import Tk, Label, Menu, Text, PhotoImage, Frame
 #from PIL import Image, ImageTk, ImageEnhance
 import os
 
+from logger import logger
+from word_counter import WordCounter
+
 class MainApp:
     def __init__(self, root):
         self.root = root
         self.root.title("WordWeave")
         self.root.geometry("800x600")
 
+		# Initialize Logger and WordCounter
+        self.logger = logger()
+        self.word_counter = WordCounter()
+        
         # Set up menu bar
         self.setup_menu()
 
