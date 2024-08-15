@@ -53,7 +53,7 @@ class MainApp:
         
 
 #this will allow me to run it without going through main.py
-if __name__ == "__main__":
-    root = Tk()
-    app = MainApp(root)
-    root.mainloop()
+# if __name__ == "__main__":
+#     root = Tk()
+#     app = MainApp(root)
+#     root.mainloop()
