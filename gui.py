@@ -62,7 +62,12 @@ class MainApp:
         edit_menu.add_command(label="Copy")
         edit_menu.add_command(label="Paste")
         menu_bar.add_cascade(label="Edit", menu=edit_menu)
-        
+
+        #Customizations Commands
+        custom_menu = Menu(menu_bar, tearoff=0)
+        custom_menu.add_command(label="Background")
+        custom_menu.add_command(label="more...") 
+        menu_bar.add_cascade(label="Customize", menu=custom_menu)
 
 
     def setup_background(self):
