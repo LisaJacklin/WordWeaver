@@ -4,8 +4,6 @@
 
 from tkinter import Tk, Label, Menu, Text, PhotoImage, Frame
 
-#double check that os is required?
-import os
 
 class MainApp:
     def __init__(self, root):
@@ -17,15 +15,11 @@ class MainApp:
         self.setup_menu()
 
         # Set up background
-       	#self.setup_background()
-           
-		#setup overlay for text
-
+        
         # Set up text area
         #TOOD adjustments to a new function call
         self.text_area = Text(self.root, wrap='word')
         self.text_area.pack(expand=True, fill='both')
-        #self.setup_text_area()
 
 		#labels
         self.label = Label(self.root, text="Welcome to WordWeaver")
