@@ -3,7 +3,8 @@
 #2024-08-14
 
 from tkinter import Tk, Label, Menu, Text, PhotoImage, Frame
-
+from PIL import Image, ImageTk, ImageEnhance
+import os
 
 class MainApp:
     def __init__(self, root):
@@ -14,12 +15,16 @@ class MainApp:
         # Set up menu bar
         self.setup_menu()
 
-        # Set up background
-        
+    # Set up background
+        self.setup_background()
+
+        # Set up text area on top of the overlay
+        self.setup_text_area()
+                
         # Set up text area
         #TOOD adjustments to a new function call
-        self.text_area = Text(self.root, wrap='word')
-        self.text_area.pack(expand=True, fill='both')
+        # self.text_area = Text(self.root, wrap='word')
+        # self.text_area.pack(expand=True, fill='both')
 
 		#labels
         self.label = Label(self.root, text="Welcome to WordWeaver")
@@ -52,8 +57,26 @@ class MainApp:
         menu_bar.add_cascade(label="Edit", menu=edit_menu)
         
 
+
+    def setup_background(self):
+        # Create a frame to cover the entire window
+        background_frame = Frame(self.root, bg="lightblue")
+        background_frame.place(relwidth=1, relheight=1)  # Fill the entire window
+
+	
+    def setup_text_area(self):
+        # Place the text area on top of the semi-transparent overlay
+        text_frame = Frame(self.root, bd=0)
+        text_frame.place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8)
+
+        # Text area setup
+        self.text_area = Text(text_frame, wrap='word', bg='white', font=('Arial', 12))
+        self.text_area.pack(expand=True, fill='both')
+
+
+
 #this will allow me to run it without going through main.py
-# if __name__ == "__main__":
-#     root = Tk()
-#     app = MainApp(root)
-#     root.mainloop()
+if __name__ == "__main__":
+     root = Tk()
+     app = MainApp(root)
+     root.mainloop()
