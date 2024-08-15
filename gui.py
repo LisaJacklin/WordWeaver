@@ -3,7 +3,7 @@
 #2024-08-14
 
 from tkinter import Tk, Label, Menu, Text, PhotoImage, Frame
-from PIL import Image, ImageTk, ImageEnhance
+#from PIL import Image, ImageTk, ImageEnhance
 import os
 
 class MainApp:
@@ -74,9 +74,3 @@ class MainApp:
         self.text_area.pack(expand=True, fill='both')
 
 
-
-#this will allow me to run it without going through main.py
-if __name__ == "__main__":
-     root = Tk()
-     app = MainApp(root)
-     root.mainloop()
