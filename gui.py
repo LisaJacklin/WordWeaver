@@ -6,6 +6,7 @@ from tkinter import Tk, Label, Menu, Text, Frame, StringVar, Scrollbar
 #from PIL import Image, ImageTk, ImageEnhance
 import os
 
+from menu import FileManager
 from logger import logger
 from word_counter import WordCounter
 
