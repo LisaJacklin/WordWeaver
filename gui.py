@@ -19,6 +19,7 @@ class MainApp:
 		# Initialize Logger and WordCounter
         self.logger = logger()
         self.word_counter = WordCounter()
+        self.menu = FileManager()
         
         # Set up menu bar
         self.setup_menu()
